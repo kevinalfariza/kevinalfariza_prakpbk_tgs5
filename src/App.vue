@@ -4,12 +4,10 @@
       <div class="q-pa-md q-gutter-sm">
         <q-bar class="bg-black text-white">
           <q-btn dense flat icon="fab fa-apple" />
-          <div class="text-weight-bold">App</div>
-          <div class="cursor-pointer gt-md">File</div>
-          <div class="cursor-pointer gt-md">Edit</div>
-          <div class="cursor-pointer gt-md">View</div>
-          <div class="cursor-pointer gt-md">Window</div>
-          <div class="cursor-pointer gt-md">Help</div>
+          <div class="text-weight-bold">warung kevin</div>
+          <div class="cursor-pointer gt-md text-blue">pesan</div>
+          <div class="cursor-pointer gt-md text-pink">keranjang</div>
+          <div class="cursor-pointer gt-md text-green">alamat</div>
           <q-space />
           <q-btn dense flat icon="airplay" class="gt-xs" />
           <q-btn dense flat icon="battery_charging_full" />
@@ -23,7 +21,7 @@
           <q-btn dense flat round icon="lens" size="8.5px" color="red" />
           <q-btn dense flat round icon="lens" size="8.5px" color="yellow" />
           <q-btn dense flat round icon="lens" size="8.5px" color="green" />
-          <div class="col text-center text-weight-bold">My-App</div>
+          <div class="col text-center text-weight-bold">KUE KEVIN</div>
         </q-bar>
       </div>
     </q-header>
@@ -45,69 +43,140 @@
           navigation
           infinite
         >
-          <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
-          <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-          <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-          <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
+          <q-carousel-slide :name="1" img-src="https://image.makewebeasy.net/makeweb/m_1920x0/rGAbosWut/DefaultData/AGS_0543_min.jpg" />
+          <q-carousel-slide :name="2" img-src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/24072104/Resep-Kue-Ulang-Tahun-Rumahan-Sederhana-dan-Elegan-.jpg.webp" />
+          <q-carousel-slide :name="3" img-src="https://cdn.idntimes.com/content-images/community/2024/01/1705315841922-050d7c823376e5868043b1f6ae8078e6-ba3b77672d25449256c943e3656b16ed.jpg" />
+          <q-carousel-slide :name="4" img-src="https://image.popmama.com/content-images/post/20230502/black-forest-cakes-35999b2c5523110b6bf3557f3473565b.jpg" />
         </q-carousel>
         
         <div class="q-pa-md row items-start q-gutter-md">
-          <q-card class="my-card" flat bordered>
-            <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
+          <q-row class="q-col-gutter-md">
+            <q-col :cols="12" :md="6">
+              <q-card class="my-card" flat bordered>
+                <q-img src="https://image.makewebeasy.net/makeweb/m_1920x0/rGAbosWut/DefaultData/AGS_0543_min.jpg" />
 
-            <q-card-section>
-              <div class="text-overline text-orange-9">Overline</div>
-              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
-              <div class="text-caption text-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </q-card-section>
-
-            <q-card-actions>
-              <q-btn flat color="primary" label="Share" />
-              <q-btn flat color="secondary" label="Book" />
-
-              <q-space />
-
-              <q-btn
-                color="grey"
-                round
-                flat
-                dense
-                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                @click="expanded = !expanded"
-              />
-            </q-card-actions>
-
-            <q-slide-transition>
-              <div v-show="expanded">
-                <q-separator />
-                <q-card-section class="text-subtitle2">
-                  {{ lorem }}
+                <q-card-section>
+                  <div class="text-overline text-orange-9">RASA COKLAT</div>
+                  <div class="text-h5 q-mt-sm q-mb-xs">kue 1</div>
+                  <div class="text-caption text-grey">
+                    kue ini terbuat dari tanah
+                  </div>
+                  <div class="text-h6 text-bold q-mt-md">Rp 1.000.000</div>
                 </q-card-section>
-              </div>
-            </q-slide-transition>
-          </q-card>
+
+                <q-card-actions>
+                  <q-btn flat color="primary" label="Share" />
+                  <q-btn flat color="green" label="Buy" />
+
+                  <q-space />
+                </q-card-actions>
+              </q-card>
+            </q-col>
+            
+            <q-col :cols="12" :md="6">
+              <q-card class="my-card" flat bordered>
+                <q-img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/24072104/Resep-Kue-Ulang-Tahun-Rumahan-Sederhana-dan-Elegan-.jpg.webp" />
+
+                <q-card-section>
+                  <div class="text-overline text-orange-9">RASA BENSIN</div>
+                  <div class="text-h5 q-mt-sm q-mb-xs">kue 2</div>
+                  <div class="text-caption text-grey">
+                    kue ini terbuat dari bahan bakar bensin
+                  </div>
+                  <div class="text-h6 text-bold q-mt-md">Rp 300.000</div>
+                </q-card-section>
+
+                <q-card-actions>
+                  <q-btn flat color="primary" label="Share" />
+                  <q-btn flat color="green" label="Buy" />
+
+                  <q-space />
+                </q-card-actions>
+
+                <q-slide-transition>
+                  <div v-show="expanded">
+                    <q-separator />
+                    <q-card-section class="text-subtitle2">
+                      {{ lorem }}
+                    </q-card-section>
+                  </div>
+                </q-slide-transition>
+              </q-card>
+            </q-col>
+            
+            <q-col :cols="12" :md="6">
+              <q-card class="my-card" flat bordered>
+                <q-img src="https://cdn.idntimes.com/content-images/community/2024/01/1705315841922-050d7c823376e5868043b1f6ae8078e6-ba3b77672d25449256c943e3656b16ed.jpg" />
+
+                <q-card-section>
+                  <div class="text-overline text-orange-9">RASA KELAPA</div>
+                  <div class="text-h5 q-mt-sm q-mb-xs">kue 3</div>
+                  <div class="text-caption text-grey">
+                    kue ini terbuat dari batang pohon kelapa
+                  </div>
+                  <div class="text-h6 text-bold q-mt-md">Rp 100.000</div>
+                </q-card-section>
+
+                <q-card-actions>
+                  <q-btn flat color="primary" label="Share" />
+                  <q-btn flat color="green" label="Buy" />
+
+                  <q-space />
+                </q-card-actions>
+
+                <q-slide-transition>
+                  <div v-show="expanded">
+                    <q-separator />
+                    <q-card-section class="text-subtitle2">
+                      {{ lorem }}
+                    </q-card-section>
+                  </div>
+                </q-slide-transition>
+              </q-card>
+            </q-col>
+            
+            <q-col :cols="12" :md="6">
+              <q-card class="my-card" flat bordered>
+                <q-img src="https://image.popmama.com/content-images/post/20230502/black-forest-cakes-35999b2c5523110b6bf3557f3473565b.jpg" />
+
+                <q-card-section>
+                  <div class="text-overline text-orange-9">RASA SEMEN 3 RODA</div>
+                  <div class="text-h5 q-mt-sm q-mb-xs">kue 4</div>
+                  <div class="text-caption text-grey">
+                    kue nya terbuat dari semen 3 roda
+                  </div>
+                  <div class="text-h6 text-bold q-mt-md">Rp 100.000</div>
+                </q-card-section>
+
+                <q-card-actions>
+                  <q-btn flat color="primary" label="Share" />
+                  <q-btn flat color="green" label="Buy" />
+
+                  <q-space />
+                </q-card-actions>
+
+                <q-slide-transition>
+                  <div v-show="expanded">
+                    <q-separator />
+                    <q-card-section class="text-subtitle2">
+                      {{ lorem }}
+                    </q-card-section>
+                  </div>
+                </q-slide-transition>
+              </q-card>
+            </q-col>
+            
+          </q-row>
         </div>
       </q-page>
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://i.pinimg.com/originals/b3/ea/ee/b3eaee4c8d9ca38eb055b32f31bbc8ba.png">
-          </q-avatar>
-          <div>uir unggul</div>
-        </q-toolbar-title>
-      </q-toolbar>
-      <div class="q-pa-md q-gutter-sm">
-        <q-tree
-          :nodes="simple"
-          node-key="label"
-        />
-      </div>
-    </q-footer>
+    <q-footer elevated class="bg-pink text-white" height-hint="98">
+  <q-toolbar>
+    <q-toolbar-title>warung kevin</q-toolbar-title>
+  </q-toolbar>
+</q-footer>
+
   </q-layout>
 </template>
 
